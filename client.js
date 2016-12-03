@@ -34,8 +34,8 @@ $(document).ready(function() {
     $('#nextButton').on('click', function() {
         i = i + 1;
         i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
-        outputText = '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
-            '<p>' + tauStudentArr[i].info + '</p>';
+        outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<p>' + '<strong>' + "Student Info:" + '</strong>' + ' ' + tauStudentArr[i].info + '</p>';
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end next button on click function
@@ -45,8 +45,8 @@ $(document).ready(function() {
             i = tauStudentArr.length;
         }
         i = i - 1; // decrease by one
-        outputText = '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
-            '<p>' + tauStudentArr[i].info + '</p>';
+        outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<p>' + '<strong>' + "Student Info:" + '</strong>' + ' ' + tauStudentArr[i].info + '</p>';
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
