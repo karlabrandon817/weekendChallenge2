@@ -20,9 +20,23 @@ $(document).ready(function() {
     getStudentInfo();
 
 
+    // var initialOutput = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[0].first_name + ' ' + tauStudentArr[0].last_name + '</p>' +
+    //     //'<p>' + '<strong>' + "About" + ' ' + tauStudentArr[0].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[0].info + '</p>' +
+    //     //'<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[0]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
+    //     $('#tauStudents').html(initialOutput);
+
+
     var outputText = '';
 
     var i = 0;
+
+    $('#initialDisplay').on('click', function() {
+        outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[0].first_name + ' ' + tauStudentArr[0].last_name + '</p>' +
+            '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[0].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[0].info + '</p>' +
+            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[0]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
+        $('#tauStudents').html(outputText);
+    });
+
     $('#nextButton').on('click', function() {
         i = i + 1;
         i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
@@ -33,6 +47,7 @@ $(document).ready(function() {
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end next button on click function
+
 
     $('#prevButton').on('click', function() {
         if (i === 0) { // i would become 0
