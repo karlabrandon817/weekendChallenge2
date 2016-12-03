@@ -21,14 +21,6 @@ $(document).ready(function() {
 
 
     var outputText = '';
-    // var showStudents = function() {
-    //     for (var i = 0; i < tauStudentArr.length; i++) {
-    //         outputText += '<img src="' + tauStudentArr[i].picUrl + '" />';
-    //         outputText += '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>';
-    //         outputText += '<p>' + tauStudentArr[i].info + '</p>';
-    //     }
-    //     $('#tauStudents').html(outputText);
-    // };
 
     var i = 0;
     $('#nextButton').on('click', function() {
@@ -36,8 +28,8 @@ $(document).ready(function() {
         i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
         //show student name and info on DOM
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
-            '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>';
-        //'<p>' + 'Displaying #:' + ' ' + tauStudentArr[i].objectPosition + ' ' + 'out of' + ' ' + tauStudentArr.length;
+            '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
+            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end next button on click function
@@ -49,8 +41,8 @@ $(document).ready(function() {
         i = i - 1; // decrease by one
         //show student name and info on DOM
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
-            '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>';
-        //'<p>' + 'Displaying #:' + ' ' + tauStudentArr[i].length + ' ' + 'out of' + ' ' + tauStudentArr.length;
+            '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
+            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
