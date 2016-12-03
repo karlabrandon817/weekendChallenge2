@@ -21,21 +21,21 @@ $(document).ready(function() {
 
 
     var outputText = '';
-    var showStudents = function() {
-        for (var i = 0; i < tauStudentArr.length; i++) {
-            outputText += '<img src="' + tauStudentArr[i].picUrl + '" />';
-            outputText += '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>';
-            outputText += '<p>' + tauStudentArr[i].info + '</p>';
-        }
-        $('#tauStudents').html(outputText);
-    };
+    // var showStudents = function() {
+    //     for (var i = 0; i < tauStudentArr.length; i++) {
+    //         outputText += '<img src="' + tauStudentArr[i].picUrl + '" />';
+    //         outputText += '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>';
+    //         outputText += '<p>' + tauStudentArr[i].info + '</p>';
+    //     }
+    //     $('#tauStudents').html(outputText);
+    // };
 
     var i = 0;
     $('#nextButton').on('click', function() {
         i = i + 1;
         i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
-        outputText += '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>';
-        outputText += '<p>' + tauStudentArr[i].info + '</p>';
+        outputText = '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<p>' + tauStudentArr[i].info + '</p>';
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end next button on click function
@@ -45,8 +45,8 @@ $(document).ready(function() {
             i = tauStudentArr.length;
         }
         i = i - 1; // decrease by one
-        outputText += '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>';
-        outputText += '<p>' + tauStudentArr[i].info + '</p>';
+        outputText = '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<p>' + tauStudentArr[i].info + '</p>';
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
