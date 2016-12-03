@@ -1,7 +1,6 @@
 var tauStudentArr = [];
 
 $(document).ready(function() {
-    console.log('George and Frank');
 
     var getStudentInfo = function() {
         //make ajax call
@@ -20,6 +19,16 @@ $(document).ready(function() {
     }; //end getStudentInfo function
     getStudentInfo();
 
+
+    var outputText = '';
+    var showStudents = function() {
+        for (var i = 0; i < tauStudentArr.length; i++) {
+            outputText += '<img src="' + tauStudentArr[i].picUrl + '" />';
+            outputText += '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>';
+            outputText += '<p>' + tauStudentArr[i].info + '</p>';
+        }
+        $('#tauStudents').html(outputText);
+    };
 
 
 }); //end of doc ready function
