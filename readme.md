@@ -1,11 +1,11 @@
 Technologies Used
 -----------------
-JavaScript
-JQuery
-JSON
-Ajax
-HTML
-CSS
+* JavaScript
+* JQuery
+* JSON
+* Ajax
+* HTML
+* CSS
 
 To Do
 -----

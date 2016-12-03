@@ -30,5 +30,22 @@ $(document).ready(function() {
         $('#tauStudents').html(outputText);
     };
 
+    var i = 0;
+    $('#nextButton').on('click', function() {
+        i = i + 1; // increase i by one
+        i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
+        console.log(tauStudentArr[i]); // give us back the item of where we are now
+    });
+
+    $('#prevButton').on('click', function() {
+        if (i === 0) { // i would become 0
+            i = tauStudentArr.length; // so put it at the other end of the array
+        }
+        i = i - 1; // decrease by one
+        console.log(tauStudentArr[i]); // give us back the item of where we are now
+    });
+
+
+
 
 }); //end of doc ready function
