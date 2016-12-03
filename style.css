@@ -1,8 +1,20 @@
 .moveButton {
     postion: relative;
-    margin-top: 10%;
+    margin-top: 12%;
 }
 
 #tauStudents {
     position: fixed;
+    margin-top: 2%;
+    font-family: sans-serif;
+    font-size: 16px;
+    vertical-align: center;
+}
+
+body {
+    padding-left: 15px;
+}
+
+h1 {
+    text-decoration: underline;
 }

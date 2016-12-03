@@ -37,6 +37,7 @@ $(document).ready(function() {
         //show student name and info on DOM
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>';
+        //'<p>' + 'Displaying #:' + ' ' + tauStudentArr[i].objectPosition + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end next button on click function
@@ -49,6 +50,7 @@ $(document).ready(function() {
         //show student name and info on DOM
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>';
+        //'<p>' + 'Displaying #:' + ' ' + tauStudentArr[i].length + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
