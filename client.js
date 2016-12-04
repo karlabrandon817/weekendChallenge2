@@ -13,16 +13,28 @@ $(document).ready(function() {
                 //loop through student data and push to tauStudentArr
                 for (var i = 0; i < data.tau.length; i++) {
                     tauStudentArr.push(data.tau[i]);
+                    displayStudents(tauStudentArr);
                 } //end for loop
             }
-
         });
     }; //end getStudentInfo function
     getStudentInfo();
 
 
-    var outputText = '';
+
     var i = 0;
+
+    var outputText = '';
+    var displayStudents = function(student, index) {
+        // console.log('in displayStudents');
+        // for (var i = 0; i < tauStudentArr.length; i++) {
+        //outputText += '<img src="' + tauStudentArr[i].picUrl + '">';
+        outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
+            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
+        // }
+        $('#tauStudents').html(outputText);
+    }; //end displayStudents function
 
 
     $('#nextButton').on('click', function() {
@@ -49,17 +61,6 @@ $(document).ready(function() {
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
-
-    var displayStudents = function() {
-        //  var outputText = '';
-        for (var i = 0; i < tauStudentArr.length; i++) {
-            //outputText += '<img src="' + tauStudentArr[i].picUrl + '">';
-            outputText = '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + ' ' + '</p>';
-            outputText = '<p>' + tauStudentArr[i].info + '</p>';
-        }
-        $('#tauStudents').html(outputText);
-    }; //end displayStudents function
-
 
 
 
