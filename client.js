@@ -26,8 +26,8 @@ $(document).ready(function() {
     //display first student in DOM
     var displayStudents = function(student, index) {
         // console.log('in displayStudents');
-        //outputText += '<img src="' + tauStudentArr[i].picUrl + '">';
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
             '<p id="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
@@ -39,6 +39,7 @@ $(document).ready(function() {
         i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
         //show student name and info on DOM
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
             '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
@@ -53,6 +54,7 @@ $(document).ready(function() {
         i = i - 1; // decrease by one
         //show student name and info on DOM
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
+            '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
             '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
