@@ -1,6 +1,7 @@
 .moveButton {
     postion: relative;
     margin-top: 10%;
+    width: 85px;
 }
 
 #tauStudents {
@@ -22,4 +23,8 @@ body {
 
 #page-content {
     background-color: FloralWhite;
+}
+
+#nextButton {
+    margin-left: 12px;
 }

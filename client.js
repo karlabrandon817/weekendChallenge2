@@ -20,23 +20,20 @@ $(document).ready(function() {
     }; //end getStudentInfo function
     getStudentInfo();
 
-
-
     var i = 0;
 
     var outputText = '';
+    //display first student in DOM
     var displayStudents = function(student, index) {
         // console.log('in displayStudents');
-        // for (var i = 0; i < tauStudentArr.length; i++) {
         //outputText += '<img src="' + tauStudentArr[i].picUrl + '">';
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
-            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
-        // }
+            '<p id="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
     }; //end displayStudents function
 
-
+    //next button function
     $('#nextButton').on('click', function() {
         i = i + 1;
         i = i % tauStudentArr.length; // if we've gone too high, start from `0` again
@@ -48,7 +45,7 @@ $(document).ready(function() {
         console.log(tauStudentArr[i]);
     }); //end next button on click function
 
-
+    //previous button function
     $('#prevButton').on('click', function() {
         if (i === 0) { // i would become 0
             i = tauStudentArr.length;
