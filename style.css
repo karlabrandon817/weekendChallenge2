@@ -1,11 +1,10 @@
 .moveButton {
-    postion: fixed;
-    margin-top: 24%;
+    postion: relative;
     width: 85px;
 }
 
 #tauStudents {
-    position: fixed;
+    position: relative;
     font-family: sans-serif;
     font-size: 16px;
 }

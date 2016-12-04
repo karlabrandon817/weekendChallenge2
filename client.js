@@ -63,5 +63,26 @@ $(document).ready(function() {
 
 
 
+    var addPeeps = function() {
+        // loop through peeps arraay and add to document
+        var outputText = $('#tauStudents').html();
+        for (var i = 0; i < tauStudentArr.length; i++) {
+            console.log('add peeps running');
+            //outputText += '<button class="testButtonClass btn btn-danger" name="' + peeps[i] + '">' + peeps[i] + '</button>';
+            outputText += '<button class="testButtonClass btn btn-success" name="' + tauStudentArr[i] + '">' + tauStudentArr[i] + '</button>';
+        }
+        $('#tauStudents').html(outputText);
+    }; // end addPeeps
+
+    // run addPeeps on doc ready
+    addPeeps();
+
+
+
+
+
+
+
+
 
 }); //end of doc ready function
