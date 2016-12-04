@@ -14,6 +14,7 @@ $(document).ready(function() {
                 for (var i = 0; i < data.tau.length; i++) {
                     tauStudentArr.push(data.tau[i]);
                     displayStudents(tauStudentArr);
+
                 } //end for loop
             }
         });
@@ -63,19 +64,16 @@ $(document).ready(function() {
 
 
 
-    var addPeeps = function() {
-        // loop through peeps arraay and add to document
-        var outputText = $('#tauStudents').html();
-        for (var i = 0; i < tauStudentArr.length; i++) {
-            console.log('add peeps running');
-            //outputText += '<button class="testButtonClass btn btn-danger" name="' + peeps[i] + '">' + peeps[i] + '</button>';
-            outputText += '<button class="testButtonClass btn btn-success" name="' + tauStudentArr[i] + '">' + tauStudentArr[i] + '</button>';
-        }
-        $('#tauStudents').html(outputText);
-    }; // end addPeeps
+    // var addButtons = function() {
+    //     // loop through tauStudentArr  and add to document
+    //     var outputText = $('#studentButtons').html();
+    //     for (var i = 0; i < tauStudentArr.length; i++) {
+    //         outputText += '<button class="moveButton btn btn-success" name="' + tauStudentArr[i] + '">' + tauStudentArr[i].first_name + '</button>';
+    //     }
+    //     $('#studentButtons').html(outputText);
+    // }; // end addPeeps
 
     // run addPeeps on doc ready
-    addPeeps();
 
 
 
