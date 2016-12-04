@@ -1,4 +1,6 @@
 var tauStudentArr = [];
+var outputText = '';
+var i = 0;
 
 $(document).ready(function() {
 
@@ -14,23 +16,20 @@ $(document).ready(function() {
                 for (var i = 0; i < data.tau.length; i++) {
                     tauStudentArr.push(data.tau[i]);
                     displayStudents(tauStudentArr);
-
                 } //end for loop
             }
         });
     }; //end getStudentInfo function
     getStudentInfo();
 
-    var i = 0;
 
-    var outputText = '';
     //display first student in DOM
     var displayStudents = function(student, index) {
         // console.log('in displayStudents');
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
-            '<p id="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
+            '<p class="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
     }; //end displayStudents function
 
@@ -42,7 +41,7 @@ $(document).ready(function() {
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
-            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
+            '<p class="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end next button on click function
@@ -57,28 +56,10 @@ $(document).ready(function() {
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
-            '<p>' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
+            '<p class="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
-
-
-
-    // var addButtons = function() {
-    //     // loop through tauStudentArr  and add to document
-    //     var outputText = $('#studentButtons').html();
-    //     for (var i = 0; i < tauStudentArr.length; i++) {
-    //         outputText += '<button class="moveButton btn btn-success" name="' + tauStudentArr[i] + '">' + tauStudentArr[i].first_name + '</button>';
-    //     }
-    //     $('#studentButtons').html(outputText);
-    // }; // end addPeeps
-
-    // run addPeeps on doc ready
-
-
-
-
-
 
 
 
