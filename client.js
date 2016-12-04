@@ -15,13 +15,13 @@ $(document).ready(function() {
                     tauStudentArr.push(data.tau[i]);
                 } //end for loop
             }
+
         });
     }; //end getStudentInfo function
     getStudentInfo();
 
+
     var outputText = '';
-
-
     var i = 0;
 
 
@@ -49,6 +49,17 @@ $(document).ready(function() {
         $('#tauStudents').html(outputText);
         console.log(tauStudentArr[i]);
     }); //end prev button on click function
+
+    var displayStudents = function() {
+        //  var outputText = '';
+        for (var i = 0; i < tauStudentArr.length; i++) {
+            //outputText += '<img src="' + tauStudentArr[i].picUrl + '">';
+            outputText = '<p>' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + ' ' + '</p>';
+            outputText = '<p>' + tauStudentArr[i].info + '</p>';
+        }
+        $('#tauStudents').html(outputText);
+    }; //end displayStudents function
+
 
 
 
