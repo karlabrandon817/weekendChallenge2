@@ -18,13 +18,14 @@ $(document).ready(function() {
                     displayStudents(tauStudentArr);
                 } //end for loop
             }
+
         });
     }; //end getStudentInfo function
     getStudentInfo();
 
 
     //display first student in DOM
-    var displayStudents = function(student, index) {
+    var displayStudents = function() {
         // console.log('in displayStudents');
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
