@@ -15,10 +15,10 @@ $(document).ready(function() {
                 //loop through student data and push to tauStudentArr
                 for (var i = 0; i < data.tau.length; i++) {
                     tauStudentArr.push(data.tau[i]);
-                    displayStudents(tauStudentArr);
+                  //  displayStudents(tauStudentArr);
                 } //end for loop
-            }
-
+                  displayStudents();
+            }//end ajax success function
         });
     }; //end getStudentInfo function
     getStudentInfo();
