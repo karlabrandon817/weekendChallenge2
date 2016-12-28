@@ -27,17 +27,22 @@ $(document).ready(function() {
     //display first student in DOM
     var displayStudents = function() {
         // console.log('in displayStudents');
+      var $container = $('#tauStudents');
+      $container.fadeOut(function(){
         outputText = '<p>' + '<strong>' + "Name:" + '</strong>' + ' ' + tauStudentArr[i].first_name + ' ' + tauStudentArr[i].last_name + '</p>' +
             '<img class="picture" src="' + tauStudentArr[i].picUrl + '">' +
             '<p>' + '<strong>' + "About" + ' ' + tauStudentArr[i].first_name + ":" + '' + '</strong>' + ' ' + tauStudentArr[i].info + '</p>' +
             '<p class="dispStud">' + 'Displaying Student:' + ' ' + (tauStudentArr.indexOf(tauStudentArr[i]) + 1) + ' ' + 'out of' + ' ' + tauStudentArr.length;
         $('#tauStudents').html(outputText);
+      });
+      $container.fadeIn(1000);
     }; //end displayStudents function
 
     //next button function
     $('#nextButton').on('click', function() {
         i = i + 1;
         i = i % tauStudentArr.length;
+        $("#tauStudents").fadeOut(1000);
         displayStudents();
     }); //end next button on click function
 
@@ -49,8 +54,5 @@ $(document).ready(function() {
         i = i - 1;
         displayStudents();
     }); //end prev button on click function
-
-
-
 
 }); //end of doc ready function

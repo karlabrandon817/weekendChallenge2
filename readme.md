@@ -16,3 +16,7 @@ One object (person) will be represented on the DOM at a time (info from the JSON
 Also on the DOM will be displayed a number showing the number of people total and the number currently being viewed (e.g. "2/20").
 
 When a person is displayed, their name and info will be shown. Only one person should be shown at any given time.
+
+Hard Mode
+---------
+[x] Include a fade out and fade in animation in-between transitioning people.
