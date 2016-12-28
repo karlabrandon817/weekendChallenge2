@@ -20,6 +20,8 @@ Also on the DOM will be displayed a number showing the number of people total an
 
 When a person is displayed, their name and info will be shown. Only one person should be shown at any given time.
 
+*** Must enable cross-origin resource sharing!
+
 Hard Mode
 ---------
 [x] Include a fade out and fade in animation in-between transitioning people.
