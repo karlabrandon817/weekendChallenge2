@@ -1,3 +1,6 @@
+Weekend Challenge 2
+====================
+
 Technologies Used
 -----------------
 * JavaScript
